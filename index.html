@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery API Key Vercel</title>
+<style>
+  body {
+    margin: 0;
+    background: #000;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+  }
+  .photo-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 5px;
+    background: linear-gradient(270deg, #ff0000, #00ff00, #0000ff, #ff00ff);
+    background-size: 800% 800%;
+    animation: gradientBorder 10s ease infinite;
+  }
+  .photo-container img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+  }
+  .text-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 10px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+  }
+  @keyframes gradientBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .create-btn-container {
+    text-align: center;
+    margin: 40px 0;
+  }
+  .create-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #0070f3;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .create-btn:hover {
+    background: #005bb5;
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <div class="photo-container">
+    <img src="foto1.jpeg" alt="Step 1">
+    <div class="text-overlay">masuk ke web vercel token atau kalian bisa klik tombol yang ada di bagian bawa ini</div>
+  </div>
+  <div class="photo-container">
+    <img src="foto2.jpeg" alt="Step 2">
+    <div class="text-overlay">di sini kalian isi aja nama.
+      masukin akun vercel kalian atau bisa pilih juga akun penuh. 
+      atur tanggal kadaluarsa token, kalian bisa juga pilih tidak ada kadaluarsa. </div>
+  </div>
+  <div class="photo-container">
+    <img src="foto3.jpeg" alt="Step 3">
+    <div class="text-overlay">klik button crate/buat</div>
+  </div>
+  <div class="photo-container">
+    <img src="foto4.jpeg" alt="Step 4">
+    <div class="text-overlay">salin kode nya dan simpan jangan sampai bocor ya</div>
+  </div>
+</div>
+
+<div class="create-btn-container">
+  <button class="create-btn" onclick="window.open('https://vercel.com/account/tokens','_blank')">
+    Create API Key
+  </button>
+</div>
+
+</body>
+</html>
